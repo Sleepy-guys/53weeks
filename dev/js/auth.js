@@ -1,8 +1,11 @@
+/* eslint-disable no-undef */
 $(function() {
     // toggle
     var flag = true;
     $('.switch-button').on('click', function(e) {
         e.preventDefault();
+
+        $('input').val('');
 
         if (flag) {
             flag = false;
@@ -45,8 +48,10 @@ $(function() {
                     });
                 }
             } else {
-                $('.register h2').after('<p class="success">Поздравляю вы зарегистрированы!</p>');
+                $('.register h2').after('<p class="success">Отлично!</p>');
             }
         });
     });
 });
+
+/* eslint-enable no-undef */
